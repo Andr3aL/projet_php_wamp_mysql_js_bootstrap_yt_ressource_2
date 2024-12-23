@@ -26,6 +26,18 @@
 <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
 <meta name="theme-color" content="#712cf9">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+  
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
+<script>
+    $(document).ready( function () {
+    $('#table_test').DataTable();
+} );
+</script>
+
 
     <style>
       .bd-placeholder-img {
@@ -167,23 +179,23 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Application commandes</a>
+      <a class="navbar-brand" href="index.php">Application commandes</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+            <a class="nav-link <?php echo !empty($index)?"active":"" ?>" href="index.php">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="articles.php">Articles</a>
+            <a class="nav-link <?php echo !empty($article)?"active":"" ?>" href="articles.php">Articles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="clients.php">Clients</a>
+            <a class="nav-link <?php echo !empty($client)?"active":"" ?>" href="clients.php">Clients</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="commandes.php">Commandes</a>
+            <a class="nav-link <?php echo !empty($commande)?"active":"" ?>" href="commandes.php">Commandes</a>
           </li>
         </ul>
         <form class="d-flex" role="search">

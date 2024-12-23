@@ -1,6 +1,12 @@
 
 
-<?php include_once("header.php"); ?>
+<?php
+
+$commande=true;
+
+include_once("header.php");
+
+?>
 
 <!-- Begin page content -->
 <main class="flex-shrink-0">

@@ -1,5 +1,12 @@
 
-<?php include_once("header.php"); ?>
+<?php
+
+$article=true;
+
+
+include_once("header.php");
+
+?>
 
 <!-- Begin page content -->
 <main class="flex-shrink-0">
